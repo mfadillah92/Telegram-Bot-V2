@@ -23,7 +23,7 @@ const main = () => {
     console.log('feature ready!')
 }
 
-if (token === "production") {
+if (process.env.NODE_ENV === "production") {
 	const app = express()
 	app.use(express.json())
 	app.use(webhookCallback(bot, "express"))
