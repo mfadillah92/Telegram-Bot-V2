@@ -3,7 +3,7 @@ const Sefirosbot = require("./app/Sefirosbot")
 const { Bot, webhookCallback } = require("grammy")
 const express = require("express")
 
-const token = process.env.TELEGRAM_TOKEN
+const token = process.env.BOT_TOKEN
 const options = {
     polling: true
 }
@@ -23,7 +23,7 @@ const main = () => {
     console.log('feature ready!')
 }
 
-if (process.env.TELEGRAM_TOKEN === "production") {
+if (token === "production") {
 	const app = express()
 	app.use(express.json())
 	app.use(webhookCallback(bot, "express"))
