@@ -1,5 +1,5 @@
 require("dotenv").config()
-const Sefirosbot = require("./app/Sefirosbot", "grammy")
+const Bot = require("./app/Sefirosbot", "grammy")
 const { webhookCallback } = require("grammy")
 const express = require("express")
 
@@ -9,7 +9,7 @@ const options = {
 }
 
 console.log("starting Sefirosbot...")
-const bot = new Sefirosbot(token, options)
+const bot = new Bot(token, options)
 
 const main = () => {
 	console.log("checking feature...")
@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 	
 	const PORT = process.env.PORT || 3000
 	app.listen(PORT, () => {
-		console.log(`Sefirosbot listening on port ${PORT}`)
+		console.log(`Bot listening on port ${PORT}`)
   })
 } else {
 	main()
