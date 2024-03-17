@@ -6,7 +6,7 @@ const options = {
     polling: true
 }
 
-console.log("starting cuybot...")
+console.log("starting Sefirosbot...")
 const bot = new Sefirosbot(token, options)
 
 const main = () => {
