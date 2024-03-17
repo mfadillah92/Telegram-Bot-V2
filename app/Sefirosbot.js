@@ -3,7 +3,7 @@ const fetch = require("node-fetch")
 const commands = require("../libs/commands")
 const { helpTextMessage, invalidCommandMessage } = require("../libs/constant")
 
-class Cuybot extends TelegramBot {
+class Sefirosbot extends TelegramBot {
     constructor(token, options) {
         super(token, options)
         this.on("message", (data) => {
@@ -41,7 +41,7 @@ class Cuybot extends TelegramBot {
     getGreeting() {
         this.onText(commands.greeting, (data) => {
             console.log("getGreeting Executed By " + data.from.username)
-            this.sendMessage(data.from.id, "Halo juga sayang! 💕")
+            this.sendMessage(data.from.id, "Halo juga! 💕")
         })
     }
     getFollow() {
@@ -112,4 +112,4 @@ class Cuybot extends TelegramBot {
     }
 }
 
-module.exports = Cuybot
+module.exports = Sefirosbot
