@@ -1,7 +1,7 @@
 {
-  "name": "cuybot",
+  "name": "Sefirosbot",
   "version": "1.0.0",
-  "description": "cuybot is a learning bot",
+  "description": "Sefirosbot is a learning bot",
   "main": "main.js",
   "scripts": {
     "dev": "nodemon main.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "bot",
-    "sefirosbot",
+    "Sefirosbot",
     "telegram",
     "bot"
   ],
