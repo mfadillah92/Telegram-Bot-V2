@@ -41,7 +41,7 @@ class Sefirosbot extends TelegramBot {
     getGreeting() {
         this.onText(commands.greeting, (data) => {
             console.log("getGreeting Executed By " + data.from.username)
-            this.sendMessage(data.from.id, "Halo juga orang asing! 👋")
+            this.sendMessage(data.from.id, "Halo juga orang asing 👋")
         })
     }
     getFollow() {
@@ -58,6 +58,20 @@ class Sefirosbot extends TelegramBot {
                 const apiCall = await fetch(quoteEndpoint)
                 const { quote } = await apiCall.json()
                 this.sendMessage(data.from.id, quote)
+            } catch (error) {
+                console.error(error)
+                this.sendMessage(data.from.id, "maaf silahkan ulangi lagi 🙏")
+            }
+        })
+    }
+	getJokes() {
+        this.onText(commands.joke, async (data) => {
+            console.log("getQuotes Executed By " + data.from.username)
+            const quoteEndpoint = "https://api.chucknorris.io/jokes/random"
+            try {
+                const apiCall = await fetch(quoteEndpoint)
+                const { value } = await apiCall.json()
+                this.sendMessage(data.from.id, value)
             } catch (error) {
                 console.error(error)
                 this.sendMessage(data.from.id, "maaf silahkan ulangi lagi 🙏")
