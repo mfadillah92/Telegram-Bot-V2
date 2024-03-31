@@ -16,6 +16,7 @@ const main = () => {
     bot.getGreeting()
     bot.getFollow()
     bot.getQuotes()
+	bot.getJokes()
     bot.getNews()
     bot.getQuake()
     console.log('feature ready!')
