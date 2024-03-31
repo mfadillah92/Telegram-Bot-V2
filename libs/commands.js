@@ -1,5 +1,6 @@
 const commands = {
     quote: /^!quote$/,
+	joke: /^!joke$/,
     news: /^!news$/,
     greeting: /^!halo$/,
     quake: /^!quake$/,
@@ -8,4 +9,3 @@ const commands = {
 }
 
 module.exports = commands
-
