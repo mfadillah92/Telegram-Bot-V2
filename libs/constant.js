@@ -5,6 +5,7 @@ Selamat datang! silahkan gunakan perintah yang tersedia berikut ini:
 
 !help  -> untuk memunculkan menu panduan penggunaan
 !quote -> generate kutipan secara acak
+!joke -> generate joke Chuck Norris secara acak
 !news  -> generate berita terkini dari media
 !quake -> generate berita gempa saat ini dari BMKG
 !follow [text] -> bot akan mengikuti text yang kamu inputkan
